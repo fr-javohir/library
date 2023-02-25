@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Record</title>
+  </head>
+  <body>
+    <h1>Tanlangan qaydning batafsil ma'lumoti</h1>
+    <br />
+    <br />
+    <hr />
+    <h2>Qayd nomeri : {{qayd.id}}.</h2>
+    <br />
+    <br />
+
+    <h2>Talaba :{{qayd.talaba}}.</h2>
+    <br />
+    <br />
+
+    <h2>Kitob : {{qayd.kitob}}</h2>
+    <br />
+    <br />
+    <h2>Kitob olingan sanasi : {{qayd.olingan_sana}}</h2>
+    <br />
+    <br />
+    {%if qayd.qaytardi%}
+    <h2>Holat : Kitob qaytarilgan</h2>
+    {%else%}
+    <h2>Kitob qaytarilmagan</h2>
+    {%endif%}
+    <button type="submit">
+      <a href="/record_ochir/{{qayd.id}}/">O'chirish</a>
+    </button>
+  </body>
+</html>

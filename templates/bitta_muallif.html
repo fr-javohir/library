@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Talabalar</title>
+  </head>
+  <body>
+    <h1>Tanlangan muallifning batafsil ma'lumoti</h1>
+    <br />
+    <br />
+    <hr />
+    <h2>{{muallif.id}}. {{muallif.ism}}</h2>
+    <br />
+    <br />
+    <h2>Tug'ilgan sanasi : {{muallif.tugulgan_yil}}</h2>
+    <br />
+    <br />
+    <h2>Kitoblari soni : {{muallif.kitob_soni}}</h2>
+    <br />
+    <br />
+    {%if muallif.tirik%}
+    <h2>Hozirda hayot</h2>
+    {%else%}
+    <h2>Vafot etgan</h2>
+    {%endif%}
+
+    <br />
+    <button><a href="/muallif_ochir/{{muallif.id}}/">O'chirish</a></button>
+  </body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Talabalar</title>
+  </head>
+  <body>
+    <h1>Tanlangan talabaning batafsil ma'lumoti</h1>
+    <br />
+    <br />
+    <hr />
+    <h2>{{talaba.id}}. {{talaba.ism}}</h2>
+    <br />
+    <br />
+    <h2>Kurs : {{talaba.kurs}}</h2>
+    <br />
+    <br />
+    {%if talaba.bitiruvchi%}
+    <h2>Bitiruvchi</h2>
+    {%else%}
+    <h2>Bitiruvchi emas</h2>
+    {%endif%}
+
+    <button type="submit">
+      <a href="/talaba_ochir/{{talaba.id}}/">O'chirish</a>
+    </button>
+  </body>
+</html>

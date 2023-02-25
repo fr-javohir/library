@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mualliflar</title>
+  </head>
+  <body>
+    <h1>{{xabar}}</h1>
+    <br />
+    <br />
+    <hr />
+    <br />
+    {% for qayd in qaydlar %}
+    <h3>
+      {{qayd.id}}.
+      <a href="/qayd/{{qayd.id}}/">{{qayd.talaba}} - {{qayd.kitob}} </a>
+    </h3>
+    {%endfor%}
+  </body>
+</html>

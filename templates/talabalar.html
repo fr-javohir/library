@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Talabalar</title>
+  </head>
+  <body>
+    <h1>Kutubxona tizimidagi barcha talabalar</h1>
+    <form action="/talabalar/" method="GET">
+      {% csrf_token %}
+      <input type="text" name="qidirish" />
+      <button type="submit">qidir</button>
+    </form>
+    <br />
+    <br />
+    <hr />
+    <br />
+    {% for talaba in talabalar %}
+    <h3>
+      {{talaba.id}}.
+      <a href="/talaba/{{talaba.id}}/">{{talaba}}</a>
+      {{talaba.kurs}}-kurs.
+    </h3>
+    {%endfor%}
+  </body>
+</html>

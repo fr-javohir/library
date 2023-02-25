@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Talabalar</title>
+  </head>
+  <body>
+    <h1>Mualliflar</h1>
+    <br />
+    <form action="/mualliflar/" method="POST">
+      {% csrf_token %}
+      <input type="text" name="qidirish" />
+      <button type="submit">Qidirish</button>
+    </form>
+    <br />
+    <hr />
+    <br />
+    <a href="/muallif_qosh">+</a>
+    {% for muallif in mualliflar %}
+    <h3>
+      {{muallif.id}}.
+      <a href="/muallif/{{muallif.id}}/">{{muallif.ism}}</a>
+    </h3>
+    {%endfor%}
+  </body>
+</html>

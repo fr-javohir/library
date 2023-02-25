@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Talabalar</title>
+  </head>
+  <body>
+    <h1>Kutubxona tizimidagi barcha tirik mualliflar</h1>
+    <br />
+    <br />
+    <hr />
+    <br />
+    {% for muallif in mualliflar %}
+    <h3>
+      {{muallif.id}}.
+      <a href="/muallif/{{muallif.id}}/">{{muallif.ism}}</a>
+    </h3>
+    {%endfor%}
+  </body>
+</html>

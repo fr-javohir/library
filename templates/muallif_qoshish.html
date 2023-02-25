@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="/muallif_qosh/" method="POST">
+      {% csrf_token %}
+      <label for="ism">
+        F.I.SH
+        <input type="text" placeholder="F.I.SH" name="ism" />
+      </label>
+      <br />
+      <label for="t_yil">
+        Tug'ilgan yili:
+        <input type="date" name="t_yil" />
+      </label>
+      <br />
+      <label for="tirik">
+        Tirik :
+        <input type="checkbox" name="tirik" />
+      </label>
+      <br />
+      <label for="number">
+        Kitob soni
+        <input type="number" name="k_soni" />
+      </label>
+      <br />
+      <label for="jins">
+        <select name="jins">
+          <option value="erkak">Erkak</option>
+          <option value="ayol">Ayol</option>
+        </select>
+      </label>
+      <br />
+      <button type="submit">Qo'shish</button>
+    </form>
+  </body>
+</html>
